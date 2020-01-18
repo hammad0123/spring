@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="student" class="com.lti.model.Student" scope="prototype">
+			<property name="rollNumber" value="1"></property>
+			<property name="studentName" value="Ismil Bhai"></property>
+			<property name="studentScore" value="30"></property>
+			 <property name="address" ref="address"></property> 
+							
+	</bean>
+	
+	<!-- <bean id="student" class="com.lti.model.Student" scope="prototype">
+	<constructor-arg name="rollNumber" value="1"></constructor-arg>
+	<constructor-arg name="studentName" value="rohan"></constructor-arg>
+	<constructor-arg name="studentScore" value="99.5"></constructor-arg>
+	</bean> -->
+	
+	<bean id ="address" class="com.lti.model.Address" scope="prototype">
+		<property name="addressId" value="1"></property>
+			<property name="city" value="Hyd"></property>
+			<property name="pin" value="500011"></property>
+	
+	</bean>
+</beans>
